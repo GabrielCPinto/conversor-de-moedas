@@ -19,11 +19,12 @@ def convert_currency(base):
 
 def main():
     base = input('Base currency: ').upper()
+    rate = float(input('Value: '))
     
     data = convert_currency(base)
     del data[base]
     for ticker, value in data.items():
-        print(f'{ticker}: {value}')
+        print(f'{ticker}: {rate * value}')
 
 if __name__ == '__main__':
     main()
