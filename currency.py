@@ -24,7 +24,7 @@ def main():
     data = convert_currency(base)
     del data[base]
     for ticker, value in data.items():
-        print(f'{ticker}: {rate * value}')
+        print(f'{ticker}: {rate * value:.2f}')
 
 if __name__ == '__main__':
     main()
